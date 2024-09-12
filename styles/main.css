@@ -47,16 +47,26 @@ input, button, textarea, select {
 body {
   font-family: Montserrat;
   padding-bottom: 0;
-  font-size: 1.2rem;
 }
 
 /* || Header */
 
 .header  {
-  padding: var(--padding-sides);
-  padding-top: 2em;
+  position: relative;
+  
+  & .header__background {
+    background-color: var(--color-one);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 92%);
 
-   & .quavo {
+  }
+
+  & .quavo {
+    padding: var(--padding-sides);
+    padding-top: 2em;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
@@ -74,9 +84,11 @@ body {
   
     & .name {
       padding: .2em;
+      font-size: calc(1.5rem + 1vw);
     }
   
     & .photo {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-radius: var(--border-r);
     }
   }
@@ -89,6 +101,7 @@ body {
   padding-top: 2em;
   display: flex;
   flex-direction: column;
+  font-size: calc(1rem + 1vw);
 
   & .about__heading {
     text-align: center;
@@ -108,10 +121,19 @@ body {
 
 .my-work {
   padding: var(--padding-sides);
+  padding-top: 5em;
+  padding-bottom: 5em;
 
   & .my-work__heading {
     text-align: center;
-    padding-bottom: .5em;
+  }
+
+  & .project-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
   }
 
   & .project-card__info, 
@@ -121,8 +143,8 @@ body {
   }
 
   & .project-card {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 3.5em;
+    font-size: calc(1rem + 1vw);
 
     display: flex;
     flex-direction: column;
@@ -131,7 +153,13 @@ body {
     border-radius: var(--border-r);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
-    & .project-card__image {
+
+    & .project-card__image > img {
+      object-fit: contain;
+    }
+
+    & .project-card__image__container,
+    .project-card__image__container > img {
       border-top-left-radius: var(--border-r);
       border-top-right-radius: var(--border-r);
     }
@@ -157,12 +185,12 @@ body {
 .contact {
   background-color: var(--color-one);
   color: var(--color-three);
+  font-size: calc(1rem + 1vw);
 
   & .contact__heading {
     padding: var(--padding-sides);
     text-align: center;
     padding-top: .5em;
-    padding-bottom: .5em;
   }
 
   & .contact__text {
@@ -181,6 +209,7 @@ body {
     align-items: center;
     gap: 1em;
     padding-top: 1em;
+    padding-bottom: 3em;
   }
 }
 
@@ -198,9 +227,6 @@ body {
 }
 
 .section-heading {
-  font-size: 2rem;
-}
-
-.padding-bottom-five {
-  padding-bottom: 5em;
+  font-size: calc(2rem + 2vw);
+  padding-bottom: 1em;
 }
