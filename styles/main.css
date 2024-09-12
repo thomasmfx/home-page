@@ -1,3 +1,8 @@
+/* || Base */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* || Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -32,4 +37,128 @@ input, button, textarea, select {
   --color-one: #d90368;
   --color-two: #000000;
   --color-three: #f1faee;
+  --bold: 500;
+  --border-r: .5em;
+  --padding-sides: 0em 2em 0em 2em;
+}
+
+/* || Helpers */
+
+.img-small {
+  width: 32px;
+  height: 32px;
+}
+
+.img-large {
+  width: 64px;
+  height: 64px;
+}
+
+body {
+  font-family: Montserrat;
+  padding-bottom: 0;
+  font-size: 1.2rem;
+}
+
+/* || Header */
+
+.header  {
+  padding: var(--padding-sides);
+  padding-top: 2em;
+
+   & .quavo {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: end;
+    justify-items: center;
+  
+    font-size: .9rem;
+    color: var(--color-three);
+    font-weight: var(--bold);
+  
+    & .name,
+    .photo {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+  
+    & .name {
+      padding: .2em;
+    }
+  
+    & .photo {
+      border-radius: var(--border-r);
+    }
+  }
+}
+
+/* || About */
+
+.about {
+  padding: var(--padding-sides);
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+
+  & .about__heading {
+    text-align: center;
+    padding-bottom: .5em;
+  }
+
+  & .about__social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-top: 1em;
+  }
+}
+
+/* || My Work */
+
+.my-work {
+  padding: var(--padding-sides);
+  padding-top: 5em;
+
+  & .my-work__heading {
+    text-align: center;
+    padding-bottom: .5em;
+  }
+
+  & .project-card__info, 
+  .project-card__description {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  & .project-card {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+
+    border-radius: var(--border-r);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+    & .project-card__image {
+      border-top-left-radius: var(--border-r);
+      border-top-right-radius: var(--border-r);
+    }
+
+    & .project-card__info {
+      display: flex;
+      justify-content: space-between;
+
+      & .project-card__info__links {
+        display: flex;
+        gap: .5em;
+      }
+    }
+
+    & .project-card__description {
+      padding-bottom: 2em;
+    }
+  }
 }
