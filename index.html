@@ -9,12 +9,44 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
+    <header class="header--desktop">
+        <div class="header--desktop__background"></div>
+        <section class="about--desktop">
+            <div class="avatar">
+                <img class="avatar__photo--desktop" src="assets/avatar.jpg" alt="">
+                <h1 class="about__photo__name">Quavious Marshall</h1>
+            </div>
+            <div class="about__content-wrapper">
+                <h2 class="about__heading">About me</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad expedita consequuntur numquam rem praesentium saepe totam possimus? Est atque sed, iure odio dicta fugiat adipisci non ipsa, error dolorum, dolor veritatis numquam.
+                </p>
+                <div class="about__social-links">
+                    <a href="#">
+                        <img src="assets/github.svg" alt="GitHub">
+                    </a>
+                    <a href="#">
+                        <img src="assets/linkedin.svg" alt="GitHub">
+                    </a>
+                    <a href="#">
+                        <img src="assets/dev-to.svg" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+
+
     <header class="header--tablet">
         <div class="header__background"></div>
-        <h1 class="header__name">Quavious Marshall</h1>
         <section class="about--tablet">
             <div class="about__content-wrapper">
-                <img class="about__photo" src="assets/avatar.jpg" alt="Quavious Marshall">
+                <div class="about__photo">
+                    <h1 class="about__photo__name">Quavious Marshall</h1>
+                    <img src="assets/avatar.jpg" alt="Quavious Marshall">
+                </div>
                 <h2 class="about__heading">About me</h2>
                 <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad expedita consequuntur numquam rem praesentium saepe totam possimus? Est atque sed, iure odio dicta fugiat adipisci non ipsa, error dolorum, dolor veritatis numquam.
@@ -191,12 +223,12 @@
                 Atlanta, Georgia, U.S.
                 <br><br>
                 <span class="contact__addres__phone">
-                    <box-icon class="icon" name='phone' animation='tada' color="#f1faee"></box-icon>
+                    <box-icon class="icon" name='phone' color="#f1faee"></box-icon>
                     678-999-8212
                 </span>
                 <br>
                 <span class="contact__addres__email">
-                    <box-icon class="icon" name='envelope' animation='tada' flip='horizontal' color="#f1faee"></box-icon>
+                    <box-icon class="icon" name='envelope' flip='horizontal' color="#f1faee"></box-icon>
                     quavohuncho@gmail.com
                 </span>
             </address>
