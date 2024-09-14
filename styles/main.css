@@ -127,19 +127,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2em;
+    row-gap: 4em;
+    column-gap: 3em;
   }
 
   & .project-card__info, 
   .project-card__description {
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   & .project-card {
-    margin-bottom: 3.5em;
     font-size: 1rem;
-    max-width: 400px;
+    max-width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -148,10 +148,6 @@ body {
     border-radius: var(--border-r);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 
-
-    & .project-card__image > img {
-      object-fit: contain;
-    }
 
     & .project-card__image__container,
     .project-card__image__container > img {
@@ -178,8 +174,15 @@ body {
 /* || Contact Me */
 
 .contact {
+  display: flex;
+  align-items: center;
   background-color: var(--color-one);
   color: var(--color-three);
+
+  & .contact__image {
+    display: none;
+    visibility: hidden;
+  }
 
   & .contact__text {
     padding: var(--padding-sides);
@@ -189,6 +192,20 @@ body {
   & .contact__addres {
     padding: var(--padding-sides);
     padding-bottom: 1em;
+
+    & .contact__addres__phone,
+    .contact__addres__email {
+      display: flex;
+      align-items: center;
+      gap: .5em;
+    }
+
+    & .contact__addres__phone > .icon,
+    .contact__addres__email > .icon {
+      display: none;
+      visibility: hidden;
+    }
+  
   }
 
   & .contact__socials {
@@ -286,6 +303,39 @@ body {
           margin-right: .5em;
         }
       } 
+    }
+  }
+
+  .contact {
+    & .contact__image {
+      display: block;
+      visibility: visible;
+      max-width: 400px;
+    }
+
+    & .contact__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      padding-left: 2em;
+      font-size: 1.2rem;
+
+      & .contact__text,
+      .contact__addres,
+      .contact__heading {
+        padding-left: 0;
+        padding-right: 0;
+      } 
+
+      & .contact__addres {
+        & .contact__addres__phone > .icon,
+        .contact__addres__email > .icon {
+          display: block;
+          visibility: visible;
+        }
+      }
     }
   }
 }

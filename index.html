@@ -6,6 +6,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
     <header class="header--tablet">
@@ -65,7 +66,7 @@
         <div class="project-card-wrapper">
             <div class="project-card">
                 <div class="project-card__image__container">
-                    <img src="https://placehold.co/400x300?text=screenshot of project" alt="">
+                    <img src="https://placehold.co/300x200?text=screenshot of project" alt="">
                 </div>
                 <div class="project-card__info">
                     <h3 class="project-card__info__name">Project name</h3>
@@ -84,7 +85,7 @@
             </div>
             <div class="project-card">
                 <div class="project-card__image__container">
-                    <img src="https://placehold.co/400x300?text=screenshot of project" alt="">
+                    <img src="https://placehold.co/300x200?text=screenshot of project" alt="">
                 </div>
                 <div class="project-card__info">
                     <h3 class="project-card__info__name">Project name</h3>
@@ -103,7 +104,7 @@
             </div>
             <div class="project-card">
                 <div class="project-card__image__container">
-                    <img src="https://placehold.co/400x300?text=screenshot of project" alt="">
+                    <img src="https://placehold.co/300x200?text=screenshot of project" alt="">
                 </div>
                 <div class="project-card__info">
                     <h3 class="project-card__info__name">Project name</h3>
@@ -122,7 +123,7 @@
             </div>
             <div class="project-card">
                 <div class="project-card__image__container">
-                    <img src="https://placehold.co/400x300?text=screenshot of project" alt="">
+                    <img src="https://placehold.co/300x200?text=screenshot of project" alt="">
                 </div>
                 <div class="project-card__info">
                     <h3 class="project-card__info__name">Project name</h3>
@@ -141,7 +142,7 @@
             </div>
             <div class="project-card">
                 <div class="project-card__image__container">
-                    <img src="https://placehold.co/400x300?text=screenshot of project" alt="">
+                    <img src="https://placehold.co/300x200?text=screenshot of project" alt="">
                 </div>
                 <div class="project-card__info">
                     <h3 class="project-card__info__name">Project name</h3>
@@ -160,7 +161,7 @@
             </div>
             <div class="project-card">
                 <div class="project-card__image__container">
-                    <img src="https://placehold.co/400x300?text=screenshot of project" alt="">
+                    <img src="https://placehold.co/300x200?text=screenshot of project" alt="">
                 </div>
                 <div class="project-card__info">
                     <h3 class="project-card__info__name">Project name</h3>
@@ -180,29 +181,38 @@
         </div>
     </section>
     <footer class="contact">
-        <h2 class="contact__heading section-heading">Contact me</h2>
-        <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, beatae soluta dolorem ab eos commodi!</p>
-        <address class="contact__addres">
-            <br>
-            1234 Random Road
-            <br>
-            Atlanta, Georgia, U.S.
-            <br><br>
-            678-999-8212
-            <br>
-            quavohuncho@gmail.com
-        </address>
-        <div class="contact__socials padding-bottom-five">
-            <a href="#">
-                <img class="img-large" src="assets/github.svg" alt="GitHub">
-            </a>
-            <a href="#">
-                <img class="img-large" src="assets/linkedin.svg" alt="GitHub">
-            </a>
-            <a href="#">
-                <img class="img-large" src="assets/dev-to.svg" alt="GitHub">
-            </a>
+        <div class="contact__wrapper">
+            <h2 class="contact__heading section-heading">Contact me</h2>
+            <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, beatae soluta dolorem ab eos commodi!</p>
+            <address class="contact__addres">
+                <br>
+                1234 Random Road
+                <br>
+                Atlanta, Georgia, U.S.
+                <br><br>
+                <span class="contact__addres__phone">
+                    <box-icon class="icon" name='phone' animation='tada' color="#f1faee"></box-icon>
+                    678-999-8212
+                </span>
+                <br>
+                <span class="contact__addres__email">
+                    <box-icon class="icon" name='envelope' animation='tada' flip='horizontal' color="#f1faee"></box-icon>
+                    quavohuncho@gmail.com
+                </span>
+            </address>
+            <div class="contact__socials padding-bottom-five">
+                <a href="#">
+                    <img class="img-large" src="assets/github.svg" alt="GitHub">
+                </a>
+                <a href="#">
+                    <img class="img-large" src="assets/linkedin.svg" alt="GitHub">
+                </a>
+                <a href="#">
+                    <img class="img-large" src="assets/dev-to.svg" alt="GitHub">
+                </a>
+            </div>
         </div>
+        <img class="contact__image" src="assets/rocket-500px.png" alt="">
     </footer>
 </body>
 </html>
