@@ -165,9 +165,12 @@ body {
       & .project-card__info {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
   
         & .project-card__info__links {
           display: flex;
+          align-items: center;
           gap: .5em;
         }
       }
@@ -331,6 +334,11 @@ body {
           visibility: visible;
         }
       }
+
+      & .contact__socials {
+        display: flex;
+        padding-top: 1em;
+      }
     }
   }
 }
@@ -363,6 +371,14 @@ body {
 /* || Responsive - Desktop */
 
 @media (min-width: 1024px) {
+  .hover:hover {
+    fill: var(--color-one);
+  }
+
+  .hover-two:hover {
+    fill: var(--color-three);
+  }
+
   .header--tablet {
     display: none;
     visibility: hidden;
@@ -444,9 +460,21 @@ body {
   }
 
   .my-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     & .project-card-wrapper {
-      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(3, min-content);
       grid-template-rows: auto;
+      gap: 5vw;
+
+      & .project-card {
+        min-width: 280px;
+      }
     }
   }
 }
