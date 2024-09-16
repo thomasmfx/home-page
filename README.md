@@ -17,3 +17,5 @@ This project is a Home Page website developed with the main focus of achieving a
 ## Mobile
 
 ![Mobile preview](assets/readme/mobile.gif)
+
+wich one looks better? :)
