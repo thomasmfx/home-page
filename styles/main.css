@@ -188,10 +188,24 @@ body {
 /* || Contact Me */
 
 .contact {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: var(--color-one);
   color: var(--color-three);
+
+  & .attributions {
+    position: absolute;
+    bottom: 0;
+    opacity: .9;
+    color: var(--color-two);
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+
+    & > a {
+      text-decoration: underline dotted;
+      color: inherit;
+    }
+  }
 
   & .contact__image--tablet,
   .contact__image--desktop {
